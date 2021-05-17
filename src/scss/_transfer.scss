@@ -1,0 +1,254 @@
+#transfer {
+	background-image: url(../img/transfer/bg-transfer.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
+
+	h1 {
+		max-width: 882px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 767px) {
+		height: 345px;
+	}
+}
+
+.transfer {
+	&-white-block .list {
+		max-width: 540px;
+		@media (max-width: 1200px) {
+			max-width: 445px;
+		}
+	}
+	&-white-block {
+		.detail-link {
+			// position: absolute;
+			margin-top: 40px;
+			display: block;
+		}
+	}
+	&-list {
+		margin-left: 40px;
+		li {
+			color: #666;
+			position: relative;
+			font-size: 16px;
+			margin-bottom: 15px;
+			&:before {
+				content: url(../img/about/dot.png);
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -35px;
+				top: 0;
+			}
+		}
+	}
+	&-table {
+		background: #f5f8f8;
+	}
+	&-table-wrap {
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+		border-radius: 20px;
+		background: #fff;
+	}
+	&-table-body {
+		padding: 65px 70px;
+		.item {
+			height: 67px;
+			border-bottom: 1px solid #b1c5dd;
+			&:nth-child(1) {
+				border-top: 1px solid #b1c5dd;
+			}
+		}
+		@media (max-width: 767px) {
+			padding: 40px 30px;
+		}
+	}
+	&-in {
+		padding: 80px 0;
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+		@media (max-width: 767px) {
+			padding: 50px 0;
+		}
+		h2 {
+			margin-bottom: 50px;
+			@media (max-width: 767px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&-img-wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(1, 1fr);
+		grid-gap: 30px;
+		margin-left: 30px;
+		@media (max-width: 992px) {
+			margin-left: 0;
+		}
+	}
+
+	&.grey {
+		background: #f5f8f8;
+	}
+	&-text-booking {
+		max-width: 370px;
+		h2 {
+			margin-bottom: 90px;
+			@media (max-width: 992px) {
+				margin-bottom: 0px;
+			}
+		}
+		.btn {
+			margin-top: 25px;
+			width: 200px;
+		}
+		@media (max-width: 992px) {
+			max-width: 100%;
+		}
+	}
+	&-booking-list-wrap {
+		max-width: 670px;
+		width: 100%;
+		@include flex;
+		align-items: baseline;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+	&-booking-list {
+		max-width: 270px;
+		li {
+			color: #666;
+			position: relative;
+			font-size: 16px;
+			margin-bottom: 15px;
+			&:before {
+				content: url(../img/about/dot.png);
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -35px;
+				top: 0;
+			}
+		}
+		@media (max-width: 767px) {
+			margin: 0 auto;
+		}
+	}
+	&-booking-link-desk {
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+	&-booking-link-mob {
+		p {
+			margin: 20px 0 25px;
+		}
+		display: none;
+		@media (max-width: 992px) {
+			display: block;
+			margin-right: auto;
+		}
+	}
+	.nav-item {
+		margin-right: 90px;
+		@media (max-width: 576px) {
+			margin-right: 40px;
+		}
+	}
+	&-slider {
+		.container {
+			position: relative;
+			padding-top: 80px;
+			padding-bottom: 25px;
+			@media (max-width: 992px) {
+				padding-bottom: 50px;
+			}
+			@media (max-width: 767px) {
+				padding-top: 50px;
+			}
+		}
+		img {
+			margin-top: 50px;
+			@media (max-width: 992px) {
+				margin-bottom: 50px;
+				width: 100%;
+			}
+		}
+		&-text {
+			color: #666;
+			span {
+				font-weight: 700;
+			}
+			.price {
+				font-size: 24px;
+				color: $main-text;
+				margin-top: 20px;
+				display: block;
+			}
+			.detail-link {
+				margin-top: 50px;
+				display: block;
+			}
+		}
+		.transfer-nav-arrow {
+			position: absolute;
+			right: 15px;
+			top: 100px;
+			z-index: 99999;
+			@media (max-width: 992px) {
+				top: 38px;
+			}
+			@media (max-width: 767px) {
+				top: 8px;
+			}
+		}
+		.transfer-nav-arrow-bus {
+			position: absolute;
+			right: 15px;
+			top: 100px;
+			z-index: 99999;
+			@media (max-width: 992px) {
+				top: 38px;
+			}
+			@media (max-width: 767px) {
+				top: 8px;
+			}
+		}
+		.btnPreviousSl {
+			margin-right: 35px;
+			@media (max-width: 767px) {
+				margin-right: 25px;
+			}
+		}
+	}
+}
+
+.transfer-auto-slider {
+	margin-top: 35px;
+	.item {
+		@include flex;
+		align-items: end;
+		@media (max-width: 992px) {
+			flex-direction: column-reverse;
+		}
+	}
+}
+
+.transfer-bus-slider {
+	margin-top: 35px;
+	.item {
+		@include flex;
+		align-items: end;
+		@media (max-width: 992px) {
+			flex-direction: column-reverse;
+		}
+	}
+}

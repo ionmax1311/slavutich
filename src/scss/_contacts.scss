@@ -1,0 +1,128 @@
+.contacts {
+	position: relative;
+	// background-image: url("../img/map-bg.png");
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center;
+	height: 705px;
+	@media (max-width: 767px) {
+		height: 500px;
+	}
+	// iframe {
+	// 	width: 100%;
+	// 	height: 705px;
+	// 	@media (max-width: 767px) {
+	// 		height: 500px;
+	// 	}
+	// 	.place-card {
+	// 		display: none;
+	// 	}
+	// }
+	&-detail {
+		position: absolute;
+		transform: translate(0, -50%);
+		top: 50%;
+		right: 0;
+		background: #fff;
+		padding: 58px 0 58px 70px;
+		width: 605px;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		p {
+			font-size: 16px;
+			color: $text-color;
+		}
+		ul {
+			margin-top: 32px;
+			margin-bottom: 40px;
+			li a {
+				font-size: 16px;
+				color: $text-color;
+				&:hover {
+					color: lighten($text-color, 20%);
+				}
+			}
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+		@media (max-width: 1200px) {
+			width: 555px;
+		}
+	}
+	&-title {
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 40px;
+		&-small {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			display: block;
+		}
+		@media (max-width: 480px) {
+			font-size: 24px !important;
+			margin-bottom: 25px !important;
+		}
+	}
+	&-social a {
+		margin-right: 30px;
+		i {
+			color: $main-text;
+			font-size: 20px;
+			&:hover {
+				color: lighten($color: $main-text, $amount: 10%);
+			}
+		}
+	}
+	&-wrap {
+		position: relative;
+	}
+}
+
+.contacts-mobail {
+	background: #fff;
+	padding: 58px 0;
+	width: 100%;
+	display: none;
+	p {
+		font-size: 16px;
+		color: $text-color;
+	}
+	ul {
+		margin-top: 32px;
+		margin-bottom: 40px;
+		li a {
+			font-size: 16px;
+			color: $text-color;
+			&:hover {
+				color: lighten($text-color, 20%);
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		display: block;
+	}
+
+	.contacts-title {
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 40px;
+		.contacts-title-small {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			display: block;
+		}
+	}
+	.contacts-social a {
+		margin-right: 30px;
+		i {
+			color: $main-text;
+			font-size: 20px;
+			&:hover {
+				color: lighten($color: $main-text, $amount: 10%);
+			}
+		}
+	}
+}

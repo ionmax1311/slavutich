@@ -1,0 +1,255 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "hero";
+@import "home";
+@import "video";
+@import "tabs";
+@import "contacts";
+@import "poster";
+@import "rewievs";
+@import "about";
+@import "gallery";
+@import "transfer";
+@import "kids";
+@import "rooms";
+@import "medicine";
+@import "footer";
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+		url("../fonts/Gilroy-Regular.woff") format("woff"),
+		url("../fonts/Gilroy-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+		url("../fonts/Gilroy-Bold.woff") format("woff"),
+		url("../fonts/Gilroy-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	font-family: "Gilroy", sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+html {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+label {
+	margin: 0;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
+// input {
+// 	width: 100%;
+// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+input,
+a,
+button {
+	outline: none;
+}
+
+button {
+	background: 0;
+	border: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+// img {
+// 	width: 100%;
+// }
+
+a {
+	transition: 0.2s;
+	outline: none;
+	&:hover {
+		// color: $accent-color;
+		text-decoration: none;
+	}
+}
+.slick-arrow {
+	outline: 0 !important;
+}
+// .container {
+// 	max-width: 1170px;
+// 	margin: 0 auto;
+// }
+
+.btn {
+	background: $btn-bg;
+	border-radius: 49px;
+	font-weight: 700;
+	color: #fff;
+	height: 48px;
+
+	&:hover {
+		background: lighten($btn-bg, 10%);
+		color: #fff;
+	}
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+@media (min-width: 1200px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+		max-width: 1200px;
+	}
+}
+
+.detail-link {
+	font-size: 24px;
+	color: $text-color;
+	font-weight: 700;
+	&:after {
+		content: "";
+		background-image: url("../img/arrow-right-icon.png");
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: 15px 13px;
+		width: 40px;
+		height: 33px;
+		@media (max-width: 480px) {
+			background-position: 15px 8px;
+		}
+	}
+	&:hover {
+		color: $main-text;
+	}
+	&:hover:after {
+		background-position: 18px 13px;
+	}
+	@media (max-width: 480px) {
+		font-size: 18px;
+	}
+}
+
+.slick-slide {
+	outline: none;
+}
+.slick-disabled {
+	pointer-events: none;
+	cursor: default;
+
+	opacity: 0.2;
+}
+
+h2 {
+	@include title-h2;
+	@media (max-width: 480px) {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	color: $text-color;
+}
+h4 {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+p {
+	@include text-p;
+}
+
+.container-in {
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.back-link {
+	position: absolute;
+	font-size: 18px;
+	color: #666;
+	margin-top: 5px;
+	&::before {
+		content: url("../img/arr-left-icon.png");
+		position: absolute;
+		left: -25px;
+		top: 3px;
+	}
+	&:hover {
+		color: #666;
+	}
+	@media (max-width: 992px) {
+		top: 0;
+		left: 40px;
+	}
+}
+
+.inner-page {
+	.container {
+		position: relative;
+	}
+	img {
+		border-radius: 20px;
+		width: 100%;
+	}
+	ul {
+		padding-left: 40px;
+		li {
+			color: #666;
+			position: relative;
+			margin-bottom: 25px;
+			&:before {
+				content: url(../img/about/dot.png);
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -35px;
+				top: 0;
+			}
+		}
+	}
+	span {
+		color: $main-text;
+		font-size: 18px;
+		font-weight: 700;
+	}
+}

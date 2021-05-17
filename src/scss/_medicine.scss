@@ -1,0 +1,169 @@
+#medicine {
+	background-image: url(../img/medicine/bg-medicine.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
+
+	@media (max-width: 767px) {
+		height: 345px;
+	}
+}
+
+.medicine {
+	&.grey {
+		background: #f6f8f8;
+	}
+	.arrows {
+		position: initial;
+		width: 91px;
+	}
+	.poster-slider {
+		padding-top: 0;
+	}
+	.desc {
+		margin-top: 15px;
+		margin-bottom: 10px;
+		height: auto;
+	}
+	.transfer-right-wrap {
+		max-width: 570px;
+		width: 100%;
+		p {
+			margin-bottom: 15px;
+		}
+	}
+	.about-in {
+		align-items: flex-start;
+	}
+	.about-text h2 {
+		margin-bottom: 25px;
+	}
+	// .transfer-text-booking {
+	// 	max-width: 470px;
+	// }
+	p.grey {
+		color: $main-text;
+		font-size: 18px;
+		font-weight: 700;
+		margin-top: 35px;
+		// margin-bottom: 80px;
+	}
+	.transfer-booking-list-wrap {
+		max-width: 485px;
+	}
+	.transfer-text-booking {
+		margin-right: 40px;
+	}
+	&.poster {
+		margin: 0;
+	}
+	&.metodics .detail-link {
+		margin-top: 50px;
+		display: block;
+	}
+	.transfer-booking-list {
+		@media (max-width: 767px) {
+			max-width: initial;
+			margin: 0 35px;
+		}
+	}
+	&.medicine-slider {
+		p.grey {
+			margin-bottom: 0;
+		}
+		.detail-link {
+			margin-top: 35px;
+			display: block;
+		}
+	}
+	p {
+		margin-bottom: 15px;
+	}
+	&-spec-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 50px;
+		@media (max-width: 992px) {
+			grid-column-gap: 20px;
+			grid-row-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+		}
+		p {
+			margin-bottom: 0;
+		}
+		.desc {
+			font-size: 18px;
+
+			font-weight: 700;
+			color: #333;
+			line-height: 27px;
+			display: block;
+			@media (max-width: 480px) {
+				margin-bottom: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+	.kids-in {
+		margin-top: 0;
+	}
+	h3 {
+		margin-top: 25px;
+	}
+	img {
+		border-radius: 20px;
+	}
+	.back-link {
+		margin-top: 20px;
+	}
+	.about-img-wrap {
+		width: 100%;
+	}
+	.about-text {
+		margin-bottom: 0;
+	}
+	ul {
+		padding-left: 40px;
+		margin-bottom: 20px;
+		li {
+			color: #666;
+			position: relative;
+			margin-bottom: 10px;
+			&:before {
+				content: url(../img/about/dot.png);
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -35px;
+				top: 0;
+			}
+		}
+	}
+	.medicine-text {
+		@media (min-width: 1200px) {
+			max-width: 570px;
+		}
+	}
+	&.medicine-slider {
+		.poster-title {
+			font-weight: 700;
+			margin-top: 15px;
+		}
+		h2 {
+			max-width: 670px;
+			@media (max-width: 992px) {
+				max-width: 520px;
+			}
+			@media (max-width: 480px) {
+				max-width: 245px;
+			}
+		}
+		&.spec .arrows {
+			position: absolute;
+		}
+	}
+}

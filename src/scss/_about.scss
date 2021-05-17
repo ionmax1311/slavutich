@@ -1,0 +1,251 @@
+#about {
+	background-image: url(../img/about/bg-about.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
+
+	@media (max-width: 767px) {
+		height: 345px;
+	}
+}
+
+.about {
+	&-tabs {
+		position: relative;
+		.nav-item {
+			margin-right: 63px;
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+		}
+		.nav-tabs {
+			padding: 32px 40px;
+			width: 773px;
+			margin: -42px auto 0;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+			z-index: 999;
+			// position: absolute;
+			// transform: translate(-50%, -77px);
+			// left: 50%;
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+		.grey {
+			background: $bg-main;
+			.about-in {
+				@include flex;
+			}
+		}
+		.white {
+			.about-img-wrap {
+				img {
+					&:nth-child(1) {
+						margin-bottom: 14px;
+					}
+				}
+			}
+		}
+		.about-bottom-text {
+			// border-bottom: 1px solid #b1c5dd;
+			span {
+				color: $main-text;
+				font-weight: 700;
+				font-size: 36px;
+				padding: 80px 0 55px;
+				text-align: center;
+				display: inline-block;
+			}
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+	}
+	&-in {
+		@include flex;
+		padding: 80px 0;
+		img {
+			border-radius: 20px;
+
+			@media (max-width: 1200px) {
+				width: 100%;
+			}
+		}
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+		@media (max-width: 767px) {
+			padding: 50px 0;
+		}
+	}
+
+	&-img-grid {
+		width: 570px;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		max-height: 400px;
+		// .item:nth-child(1) {
+
+		// }
+		.item {
+			@media (max-width: 1200px) {
+				width: 210px;
+			}
+			@media (max-width: 992px) {
+				width: 100%;
+			}
+		}
+		.item:nth-child(2) {
+			grid-row: 1/-1;
+			grid-column: 2/2;
+		}
+		.item:nth-child(3) {
+			grid-column: 2/1;
+			grid-row: 2/2;
+		}
+		@media (max-width: 1200px) {
+			width: 450px;
+		}
+		@media (max-width: 991px) {
+			grid-template-columns: 2fr 330px;
+			width: 100%;
+			grid-gap: 20px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: 2fr 242px;
+		}
+
+		@media (max-width: 576px) {
+			grid-template-columns: repeat(auto-fill, minmax(163px, 1fr));
+		}
+		@media (max-width: 393px) {
+			grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+		}
+		@media (min-width: 767px) and (max-width: 992px) {
+			margin-bottom: 50px;
+		}
+	}
+	&-top-block {
+		.about-in {
+			&:nth-child(1) {
+				padding-top: 55px;
+				@media (max-width: 767px) {
+					padding-bottom: 0;
+				}
+			}
+
+			&:nth-child(2) {
+				padding-top: 0;
+			}
+			&:nth-child(2) > div {
+				@include flex;
+				// div {
+				// 	margin-right: 30px;
+				// }
+			}
+		}
+		.about-img-wrap {
+			@media (max-width: 992px) {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: repeat(1, 1fr);
+				grid-gap: 20px;
+			}
+		}
+	}
+	&-text {
+		max-width: 471px;
+		p {
+			&:nth-child(2) {
+				margin-bottom: 15px;
+			}
+		}
+		@media (max-width: 1200px) {
+			max-width: 445px;
+		}
+		@media (max-width: 992px) {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+	&-img-wrap {
+		div {
+			margin-right: 30px;
+			@media (max-width: 992px) {
+				margin-right: 0;
+				max-width: 335px;
+				width: 100%;
+			}
+			// @media (max-width: 767px) {
+			// 	max-width: 245px;
+			// }
+		}
+		@media (max-width: 1200px) {
+			max-width: 450px;
+		}
+		@media (max-width: 992px) {
+			max-width: 100%;
+		}
+	}
+	&-partners {
+		padding: 80px 0;
+		.container {
+			max-width: 770px;
+		}
+		@media (max-width: 767px) {
+			padding: 50px 0;
+		}
+	}
+	&-relax {
+		padding: 80px 0;
+		.container {
+			max-width: 770px;
+		}
+		@media (max-width: 767px) {
+			padding: 50px 0;
+		}
+	}
+	&-vacancies {
+		padding: 80px 0;
+		.container {
+			max-width: 770px;
+		}
+		h4 {
+			margin: 30px 0;
+			font-size: 18px;
+			font-weight: 700;
+			color: $text-color;
+		}
+		ul {
+			padding-left: 40px;
+			li {
+				color: #666;
+				position: relative;
+				&:before {
+					content: url("../img/about/dot.png");
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					left: -35px;
+					top: 0;
+				}
+			}
+		}
+		@media (max-width: 767px) {
+			padding: 50px 0;
+		}
+	}
+}
+
+.revers {
+	@media (max-width: 992px) {
+		flex-direction: column-reverse;
+	}
+}
